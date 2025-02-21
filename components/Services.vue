@@ -3,7 +3,7 @@ import services from "~/static/services.json";
 </script>
 
 <template>
-  <div class="main-services mt-5 p-lg-5 p-md-5 p-sm-3">
+  <div class="main-services mt-5 p-lg-5 pt-5 p-md-5 p-sm-3">
     <h1 class="text-center mb-3 mt-5">Our Services</h1>
     <div class="card-items mt-5">
       <div
