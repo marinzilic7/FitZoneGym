@@ -54,13 +54,14 @@
       </div>
     </div>
   </div>
+  <Services/>
 </template>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
 
 .main-items {
-  background-image: url("@/assets/images/home.png");
+  background-image: url("@/public/images/home.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;

@@ -1,0 +1,27 @@
+[
+  {
+    
+    "id": 1,
+    "image": "/images/atletika.jpg",
+    "name": "Atheletics",
+    "description": " Improve your speed, agility, and endurance through specialized training programs. Our expert coaches help athletes of all levels enhance their performance and prevent injuries."
+  },
+  {
+    "id": 2,
+    "image": "/images/terapy.jpg",
+    "name": "Physical Therapy",
+    "description": "Recover faster and move better with personalized rehabilitation plans. Our physical therapy sessions focus on reducing pain, restoring mobility, and strengthening muscles to prevent future injuries."
+  },
+  {
+    "id": 3,
+    "image": "/images/weight.jpg",
+    "name": "Weight Training",
+    "description": "Build muscle, increase strength, and boost endurance with structured resistance training. Whether you're a beginner or an experienced lifter, our programs are designed to help you reach your fitness goals safely and effectively."
+  },
+  {
+    "id": 4,
+    "image": "/images/nutrition.jpg",
+    "name": "Nutrional Guidance",
+    "description": "Optimize your health and performance with personalized nutrition plans. Learn how to fuel your body with the right balance of nutrients to support muscle growth, weight management, and overall well-being."
+  }
+]
