@@ -3,14 +3,15 @@ import services from "~/static/services.json";
 </script>
 
 <template>
-  <div class="main-services mt-5 p-lg-5 p-md-5">
+  <div class="main-services mt-5 p-lg-5 p-md-5 p-sm-3">
     <h1 class="text-center mb-3 mt-5">Our Services</h1>
     <div class="card-items mt-5">
       <div
         v-for="servis in services"
         :key="servis.id"
         class="card p-0"
-        style="width: 18rem;"
+        style="width: 18rem"
+        data-aos="fade-right"
       >
         <img :src="servis.image" class="card-img-top p-3" alt="..." />
 
@@ -21,7 +22,9 @@ import services from "~/static/services.json";
           </p>
         </div>
 
-        <div class="card-body d-flex align-items-center justify-content-between">
+        <div
+          class="card-body d-flex align-items-center justify-content-between"
+        >
           <button class="btn">Read More</button>
           <button class="btn">Buy Plan</button>
         </div>
@@ -78,65 +81,58 @@ import services from "~/static/services.json";
   }
 }
 
-@media screen and (max-width: 1240px){
-    .card-items {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap:30px;
-        
-    }
-    
-    .card{
-        width: 100% !important;
-    }
+@media screen and (max-width: 1240px) {
+  .card-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px;
+  }
+
+  .card {
+    width: 100% !important;
+  }
 }
 
-
-@media  screen and (max-width: 960px) {
+@media screen and (max-width: 960px) {
   .card-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap:30px;
+    gap: 30px;
   }
 
-  .card{
+  .card {
     width: 100% !important;
   }
-    
 }
 
 @media screen and (max-width: 768px) {
   .card-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap:30px;
+    gap: 30px;
   }
 
-  .card{
+  .card {
     width: 100% !important;
   }
-    
 }
 
 @media screen and (max-width: 576px) {
-  .main-services{
-    margin:0;
+  .main-services {
+    margin: 0;
     padding: 0 15px;
-    h1{
-        margin:0 !important;
+    h1 {
+      margin: 0 !important;
     }
   }
   .card-items {
     display: grid;
     grid-template-columns: repeat(1, 1fr) !important;
-    gap:30px;
+    gap: 30px;
   }
 
-  .card{
+  .card {
     width: 100% !important;
   }
-    
 }
-
-
 </style>

@@ -22,7 +22,7 @@ const toggleNavbar = () => {
   <nav class="navbar navbar-expand-lg py-3">
     <div class="container-fluid">
       <NuxtLink class="navbar-brand" to="/"
-        ><img src="@/assets/images/logo.png" alt="logo" height="40px"
+        ><img src="@/public/images/logo.png" alt="logo" height="40px"
       /></NuxtLink>
       <button
         @click="toggleNavbar"
