@@ -30,6 +30,9 @@ import services from "~/static/services.json";
         </div>
       </div>
     </div>
+    <div class="d-flex justify-content-center align-items-center">
+      <button class="show-more btn">Show more</button>
+    </div>
   </div>
 </template>
 
@@ -77,6 +80,17 @@ import services from "~/static/services.json";
       color: #fff;
       font-size: 13px;
       padding: 5px;
+    }
+  }
+
+  .show-more{
+    background-color: $button-color;
+    color: #000;
+    border: none;
+    margin-top: 20px;
+    font-size:14px; 
+    &:hover{
+      background-color: darken($button-color, 10%);
     }
   }
 }
