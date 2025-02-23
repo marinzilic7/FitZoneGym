@@ -3,7 +3,7 @@
     <!-- <Navbar /> -->
   </nav>
   <div>
-    <div class="main-items p-5">
+    <div class="main-items p-5 mt-5">
       <h1 class="fitzone-heading mt-lg-5">FitZone</h1>
       <p class="text-light mt-lg-4 mt-3">
         Fitness is not just about working out – it's a lifestyle that enhances
