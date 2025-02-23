@@ -67,7 +67,7 @@ const setSelectedImage = (image) => {
         class="gallery d-flex justify-content-center flex-wrap align-items-center"
         data-aos="fade-right"
       >
-        <div v-for="(image, index) in images" :key="index">
+        <div class="list-images" v-for="(image, index) in images" :key="index">
           <img
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
@@ -77,6 +77,9 @@ const setSelectedImage = (image) => {
             :width="image.width"
             :height="image.height"
             @click="setSelectedImage(image)"
+            :class="{
+              'first-image': index === 0 || index === 4 || index === 9,
+            }"
           />
         </div>
       </div>
@@ -106,8 +109,7 @@ const setSelectedImage = (image) => {
               v-if="selectedImage"
               :src="selectedImage.src"
               :alt="selectedImage.alt"
-              height="700px"
-              width="100%"
+              class="img-fluid"
             />
             <button
               type="button"
@@ -141,7 +143,7 @@ const setSelectedImage = (image) => {
     img {
       border-radius: 20px;
       margin: 10px;
-      opacity: 0.9;
+      opacity: 0.7;
       transition: all 0.3s;
       cursor: pointer;
       &:hover {
@@ -150,7 +152,6 @@ const setSelectedImage = (image) => {
       }
     }
   }
- 
 }
 
 @media screen and (max-width: 1240px) {
@@ -218,52 +219,17 @@ const setSelectedImage = (image) => {
 @media screen and (max-width: 576px) {
   .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr) !important;
+    justify-items: center;
+    align-items: stretch;
 
     img {
-      &:nth-child(1) {
-        width: auto;
-        height: 150px;
-      }
-      &:nth-child(2) {
-        width: 150px;
-        height: auto;
-      }
+      max-width: 100%;
+      height: auto;
+    }
 
-      &:nth-child(4) {
-        width: 140px;
-        height: auto;
-      }
-
-      &:nth-child(5) {
-        width: auto;
-        height: 150px;
-      }
-
-      &:nth-child(6) {
-        width: 300px;
-        height: auto;
-      }
-
-      &:nth-child(7) {
-        width: 300px;
-        height: auto;
-      }
-
-      &:nth-child(8) {
-        width: auto;
-        height: 200px;
-      }
-
-      &:nth-child(9) {
-        width: 150px;
-        height: auto;
-      }
-
-      &:nth-child(10) {
-        width: auto;
-        height: 150px;
-      }
+    .first-image {
+      display: none;
     }
   }
   .img-btn-x {

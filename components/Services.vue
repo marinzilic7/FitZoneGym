@@ -31,7 +31,7 @@ import services from "~/static/services.json";
       </div>
     </div>
     <div class="d-flex justify-content-center align-items-center">
-      <button class="show-more btn">Show more</button>
+      <button class="show-more mb-3 btn">Show more</button>
     </div>
   </div>
 </template>
