@@ -57,6 +57,7 @@
   <Services/>
   <Gallery/>
   <Trainers/>
+  <Reviews/>
 </template>
 
 <style lang="scss" scoped>
