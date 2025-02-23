@@ -134,6 +134,11 @@ const setSelectedImage = (image) => {
     background-color: $button-color;
     color: #000;
     font-size: 14px;
+
+    &:hover {
+      background-color: darken($button-color, 10%);
+    }
+    
   }
   h1 {
     color: $button-color;

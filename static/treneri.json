@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "ime": "Thomas",
+        "prezime": "Dartingo",
+        "image": "/images/treneri/trener1.jpg",
+        "opis": "Thomas Dartingo is a certified personal trainer with over 10 years of experience in the fitness industry. He specializes in strength training, weight loss, and functional movement. ",
+        "specijalnost": "Strength Training",
+        "ocjena": 4.5
+        
+    },
+    {
+        "id": 2,
+        "ime": "Samantha",
+        "prezime": "Jones",
+        "image": "/images/treneri/trener2.jpg",
+        "opis": "Samantha Jones is a former professional athlete turned personal trainer. She has a background in track and field and specializes in speed and agility training.",
+        "specijalnost": "Speed and Agility",
+        "ocjena": 4.8
+
+    },
+    {
+        "id": 3,
+        "ime": "David",
+        "prezime": "Smith",
+        "image": "/images/treneri/trener3.jpg",
+        "opis": "David Smith is a certified nutritionist and fitness coach with a focus on holistic health and wellness. He helps clients improve their eating habits, manage their weight, and enhance their overall quality of life. ",
+        "specijalnost": "Nutrition and Wellness",
+        "ocjena": 4.2
+    },
+    {
+        "id": 4,
+        "ime": "Emily",
+        "prezime": "Brown",
+        "image": "/images/treneri/trener4.jpg",
+        "opis": "Emily Brown is a physical therapist and strength coach with a background in sports rehabilitation. She specializes in injury prevention, post-rehabilitation training, and functional movement. ",
+        "specijalnost": "Physical Therapy",
+        "ocjena": 4.6
+    }
+]

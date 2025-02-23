@@ -56,6 +56,7 @@
   </div>
   <Services/>
   <Gallery/>
+  <Trainers/>
 </template>
 
 <style lang="scss" scoped>
