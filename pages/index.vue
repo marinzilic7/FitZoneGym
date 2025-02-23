@@ -58,6 +58,7 @@
   <Gallery/>
   <Trainers/>
   <Reviews/>
+  <Footer/>
 </template>
 
 <style lang="scss" scoped>
@@ -149,4 +150,5 @@
     }
   }
 }
+
 </style>
