@@ -4,7 +4,7 @@
       <div class="footer-details">
         <div class="">
           <img src="@/public/images/logo-png.png" alt="" />
-          <p class="text-light">
+          <p class="mobile-text text-light">
             Fitzone is a fitness paradise where
             <span class="line-break">your goals become a reality! With</span>
             <span class="line-break">its state-of-the-art equipment</span>
@@ -34,8 +34,8 @@
             <p class="text-light">Licence</p>
           </div>
         </div>
-        <div>
-          <h5>Update For Newsletter</h5>
+        <div class="search-input-items">
+          <h5 class="text-center">Update For Newsletter</h5>
           <div class="input-group mb-3">
             <input
               type="text"
@@ -106,9 +106,49 @@ h5 {
   color: $button-color;
 }
 
+@media screen and (max-width: 878px){
+    footer {
+        padding: 3rem;
+    }
+    .footer-details {
+        display: flex;
+        flex-direction: column;
+        align-items: start !important;
+        margin: 2rem 1rem;
+        .mobile-text {
+        display: none;
+        }
+    
+        img {
+        display: none;
+        }
+    
+        h5 {
+        font-size: 0.9rem;
+        }
+        p {
+        font-size: 0.8rem;
+        }
+    
+        .search-input-items{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .search-item {
+        opacity: 0.5;
+        background: none !important;
+        color: #fff;
+        }
+    }
+}
+
 @media screen and (max-width: 576px) {
   footer {
-    padding: 1rem 0;
+    padding: 2px 0px;
   }
   .footer-details {
     display: flex;
@@ -116,6 +156,9 @@ h5 {
     align-items: start !important;
     
     margin: 2rem 1rem;
+    .mobile-text {
+      display: none;
+    }
 
     img {
       display: none;
@@ -128,10 +171,19 @@ h5 {
       font-size: 0.8rem;
     }
 
+    .search-input-items{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .search-item {
       opacity: 0.5;
       background: none !important;
       color: #fff;
+
 
       &::placeholder {
         font-style: italic;
