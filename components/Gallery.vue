@@ -69,11 +69,13 @@ const setSelectedImage = (image) => {
       >
         <div class="list-images" v-for="(image, index) in images" :key="index">
           <img
+            
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
             data-bs-whatever="@mdo"
             :src="image.src"
             :alt="image.alt"
+            
             :width="image.width"
             :height="image.height"
             @click="setSelectedImage(image)"
@@ -176,7 +178,7 @@ const setSelectedImage = (image) => {
     img {
       &:nth-child(1) {
         width: auto;
-        height: 250px;
+        height: 150px;
       }
       &:nth-child(2) {
         width: 250px;
@@ -239,7 +241,7 @@ const setSelectedImage = (image) => {
   }
   .img-btn-x {
     img {
-      height: 350px;
+      height: 200px;
     }
   }
 }

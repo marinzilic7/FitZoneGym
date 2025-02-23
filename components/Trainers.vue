@@ -39,7 +39,7 @@ import Star from "@/public/svg/Star.vue";
       </div>
     </div>
     <div class="d-flex justify-content-center align-items-center">
-      <button class="show-more-btn mb-3 mt-4 btn">Show more</button>
+      <button class="show-more-btn mb-5 mt-5 btn">Show more</button>
     </div>
   </div>
 </template>
@@ -136,9 +136,9 @@ import Star from "@/public/svg/Star.vue";
   }
 
   @media screen and (max-width: 576px) {
-    .main-services {
+    .main-trainers {
       margin: 0;
-      padding: 0 15px;
+      padding: 0 15px !important;
       h1 {
         margin: 0 !important;
       }
@@ -147,6 +147,7 @@ import Star from "@/public/svg/Star.vue";
       display: grid;
       grid-template-columns: repeat(1, 1fr) !important;
       gap: 30px;
+      padding: 0 15px !important;
     }
 
     .card {
