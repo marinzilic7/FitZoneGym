@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <Navbar />
+    <!-- <Navbar /> -->
   </nav>
   <div>
     <div class="main-items p-5">

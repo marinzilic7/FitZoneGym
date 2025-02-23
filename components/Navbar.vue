@@ -11,90 +11,122 @@ const toggleNavbar = () => {
   burger2.classList.toggle("active");
   burger3.classList.toggle("active");
 
-
   setTimeout(() => {
     isOpen.value = false;
   }, 500);
 };
+
+const isScrolled = ref(false);
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50;
+
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg py-3">
-    <div class="container-fluid">
-      <NuxtLink class="navbar-brand" to="/"
-        ><img src="@/public/images/logo.png" alt="logo" height="40px"
-      /></NuxtLink>
-      <button
-        @click="toggleNavbar"
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        :disabled="isOpen"
-      >
-        <div class="burger d-flex gap-2 flex-column">
-          <div class="burger-1"></div>
-          <div class="burger-2"></div>
-          <div class="burger-3"></div>
-        </div>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav gap-lg-5 gap-md-3 ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <NuxtLink
-              class="nav-link text-light text-center"
-              to="/"
-              exact-active-class="active-link"
-            >
-              Home
-            </NuxtLink>
-          </li>
-          <li class="nav-item">
-            <NuxtLink
-              class="nav-link text-light text-center"
-              exact-active-class="active-link"
-              to="/membership"
-            >
-              Membership
-            </NuxtLink>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light text-center"
-              exact-active-class="active-link"
-              href="#"
-              >About</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link text-light text-center"
-              exact-active-class="active-link"
-              href="#"
-              >Contact</a
-            >
-          </li>
-        </ul>
-        <ul
-          class="buttons navbar-nav ms-auto d-flex flex-sm-row flex-md-row justify-content-center gap-3"
+  <header>
+    <nav :class="['navbar', 'navbar-expand-lg', 'py-3', { scrolled: isScrolled }]">
+      <div class="container-fluid">
+        <NuxtLink class="navbar-brand" to="/"
+          ><img src="@/public/images/logo.png" alt="logo" height="40px"
+        /></NuxtLink>
+        <button
+          @click="toggleNavbar"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          :disabled="isOpen"
         >
-          <li class="nav-item">
-            <button class="button-register btn"><a href="">Sign Up</a></button>
-          </li>
-          <li class="nav-item">
-            <button class="button-login btn"><a href="">Sign In</a></button>
-          </li>
-        </ul>
+          <div class="burger d-flex gap-2 flex-column">
+            <div class="burger-1"></div>
+            <div class="burger-2"></div>
+            <div class="burger-3"></div>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav gap-lg-5 gap-md-3 ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <NuxtLink
+                class="nav-link text-light text-center"
+                to="/"
+                exact-active-class="active-link"
+              >
+                Home
+              </NuxtLink>
+            </li>
+            <li class="nav-item">
+              <NuxtLink
+                class="nav-link text-light text-center"
+                exact-active-class="active-link"
+                to="/membership"
+              >
+                Membership
+              </NuxtLink>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light text-center"
+                exact-active-class="active-link"
+                href="#"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-light text-center"
+                exact-active-class="active-link"
+                href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <ul
+            class="buttons navbar-nav ms-auto d-flex flex-sm-row flex-md-row justify-content-center gap-3"
+          >
+            <li class="nav-item">
+              <button class="button-register btn">
+                <a href="">Sign Up</a>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="button-login btn"><a href="">Sign In</a></button>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
+ 
 </template>
 
 <style lang="scss">
 @import "@/assets/scss/variables";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+  transition:  .3s ease-in-out;
+}
+
+.navbar.scrolled {
+  opacity: 0.8;
+ 
+}
 
 .burger {
   cursor: pointer;

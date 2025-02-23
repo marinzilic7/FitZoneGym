@@ -143,7 +143,7 @@ const setSelectedImage = (image) => {
     img {
       border-radius: 20px;
       margin: 10px;
-      opacity: 0.7;
+      opacity: 0.9;
       transition: all 0.3s;
       cursor: pointer;
       &:hover {
