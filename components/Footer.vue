@@ -108,23 +108,24 @@ h5 {
 
 @media screen and (max-width: 576px) {
   footer {
-    padding: 0;
+    padding: 1rem 0;
   }
   .footer-details {
     display: flex;
     flex-direction: column;
     align-items: start !important;
+    
     margin: 2rem 1rem;
 
     img {
-      width: 100px;
+      display: none;
     }
 
     h5 {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
     p {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
 
     .search-item {
