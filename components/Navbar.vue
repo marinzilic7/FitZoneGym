@@ -11,9 +11,6 @@ const toggleNavbar = () => {
   burger2.classList.toggle("active");
   burger3.classList.toggle("active");
 
-
-  
-
   setTimeout(() => {
     isOpen.value = false;
   }, 500);
@@ -81,16 +78,19 @@ onUnmounted(() => {
               </NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink to="/about" exact-active-class="active-link" class="nav-link text-light text-center"
+              <NuxtLink
+                to="/about"
+                exact-active-class="active-link"
+                class="nav-link text-light text-center"
                 >About</NuxtLink
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link text-light text-center"
+              <NuxtLink
+                to="/contact"
                 exact-active-class="active-link"
-                href="#"
-                >Contact</a
+                class="nav-link text-light text-center"
+                >Contact</NuxtLink
               >
             </li>
           </ul>
@@ -129,8 +129,8 @@ onUnmounted(() => {
   opacity: 0.8;
 }
 
-.navbar.expanded{
-  position:absolute !important;
+.navbar.expanded {
+  position: absolute !important;
 }
 .burger {
   cursor: pointer;
@@ -208,10 +208,9 @@ onUnmounted(() => {
 
 .button-register,
 .button-login {
-  width: 100%; 
+  width: 100%;
 
   @media (min-width: 576px) {
-    
     width: auto;
   }
 }
