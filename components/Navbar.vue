@@ -103,7 +103,7 @@ onUnmounted(() => {
               </button>
             </li>
             <li class="nav-item">
-              <button class="button-login btn"><a href="">Sign In</a></button>
+              <button class="button-login btn"><NuxtLink to="/login">Sign In</NuxtLink></button>
             </li>
           </ul>
         </div>
