@@ -111,7 +111,8 @@ const setSelectedImage = (image) => {
               v-if="selectedImage"
               :src="selectedImage.src"
               :alt="selectedImage.alt"
-              class="img-fluid"
+             
+              height="500px"
             />
             <button
               type="button"
