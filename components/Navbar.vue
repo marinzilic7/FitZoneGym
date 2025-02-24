@@ -11,6 +11,9 @@ const toggleNavbar = () => {
   burger2.classList.toggle("active");
   burger3.classList.toggle("active");
 
+
+  
+
   setTimeout(() => {
     isOpen.value = false;
   }, 500);
@@ -126,6 +129,9 @@ onUnmounted(() => {
   opacity: 0.8;
 }
 
+.navbar.expanded{
+  position:absolute !important;
+}
 .burger {
   cursor: pointer;
 }
@@ -202,10 +208,10 @@ onUnmounted(() => {
 
 .button-register,
 .button-login {
-  width: 100%; // Na mobilnim uređajima
+  width: 100%; 
 
   @media (min-width: 576px) {
-    // Bootstrap "sm" breakpoint (≥576px)
+    
     width: auto;
   }
 }
