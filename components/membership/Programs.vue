@@ -3,6 +3,7 @@
     class="main-programs d-flex justify-content-evenly flex-wrap align-items-center mt-5"
   >
     <div
+      data-aos="fade-right"
       class="programs p-5 d-flex flex-column justify-content-center align-items-center gap-5"
     >
       <div>
@@ -20,6 +21,7 @@
       <button class="btn btn-warning btn-sm">Buy Now</button>
     </div>
     <div
+      data-aos="fade-right"
       class="programs p-5 d-flex flex-column justify-content-center align-items-center gap-5"
     >
       <div>
@@ -37,6 +39,7 @@
       <button class="btn btn-warning btn-sm">Buy Now</button>
     </div>
     <div
+      data-aos="fade-right"
       class="programs programs-item-3 p-5 d-flex flex-column justify-content-center align-items-center gap-5"
     >
       <div>
@@ -64,7 +67,7 @@
   background-color: $dark-color;
   transition: all 0.3s ease-in-out;
   border-radius: 30px;
- 
+
   cursor: pointer;
   &:hover {
     outline: 1px solid $button-color;
@@ -89,12 +92,10 @@
     }
   }
   #list-5 {
-    li{
+    li {
       line-height: 2;
     }
   }
-
-  
 }
 
 @media screen and (max-width: 1145px) {
@@ -123,7 +124,7 @@
 
   .programs {
     width: 100%;
-
+    padding: 0;
     h3 {
       font-size: 20px;
     }

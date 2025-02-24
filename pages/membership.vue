@@ -10,7 +10,7 @@ import Programs from '~/components/membership/Programs.vue'
     <Navbar />
   </nav>
   <main>
-    <div class="main-items p-5 mt-5">
+    <div class="main-items p-0 ps-3 pe-3  p-lg-5 p-md-5 p-sm-5 p-xl-5 mt-5">
       <h5 class="fitzone-heading text-center mt-lg-3">
         Here we provide you the best facilities ever
       </h5>
@@ -29,5 +29,7 @@ import Programs from '~/components/membership/Programs.vue'
     color: $button-color;
   }
 }
+
+
 
 </style>
