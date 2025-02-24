@@ -28,7 +28,6 @@ import Programs from '~/components/membership/Programs.vue'
   h5 {
     color: $button-color;
   }
-
-  
 }
+
 </style>
