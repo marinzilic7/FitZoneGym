@@ -20,21 +20,22 @@ const isScrolled = ref(false);
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50;
-
 };
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll);
+  window.addEventListener("scroll", handleScroll);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll);
+  window.removeEventListener("scroll", handleScroll);
 });
 </script>
 
 <template>
   <header>
-    <nav :class="['navbar', 'navbar-expand-lg', 'py-3', { scrolled: isScrolled }]">
+    <nav
+      :class="['navbar', 'navbar-expand-lg', 'py-3', { scrolled: isScrolled }]"
+    >
       <div class="container-fluid">
         <NuxtLink class="navbar-brand" to="/"
           ><img src="@/public/images/logo.png" alt="logo" height="40px"
@@ -98,7 +99,7 @@ onUnmounted(() => {
           >
             <li class="nav-item">
               <button class="button-register btn">
-                <a href="">Sign Up</a>
+                <NuxtLink to="/register">Sign Up</NuxtLink>
               </button>
             </li>
             <li class="nav-item">
@@ -109,7 +110,6 @@ onUnmounted(() => {
       </div>
     </nav>
   </header>
- 
 </template>
 
 <style lang="scss">
@@ -120,12 +120,11 @@ onUnmounted(() => {
   top: 0;
   width: 100%;
   z-index: 1050;
-  transition:  .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .navbar.scrolled {
   opacity: 0.8;
- 
 }
 
 .burger {
