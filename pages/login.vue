@@ -1,37 +1,102 @@
 <template>
-    <div class="container-fluid">
-        <div class="row">
-        <div class="col-md-6">
-            <img src="images/login.jpg" alt="login" class="img-fluid" />
+  <Navbar />
+  <div class="container-fluid vh-100">
+    <div
+      class="form-items d-flex justify-content-center align-items-center vh-100"
+    >
+      <form class="col-lg-6 col-md-10 col-sm-10 col-xl-3 col-12">
+        <div class="mb-3 mt-3">
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Email"
+            autocomplete="off"
+          />
         </div>
-        <div class="col-md-6">
-            <form>
-            <h1 class="text-center">Login</h1>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input
-                type="email"
-                class="form-control"
-                id="email"
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
-                />
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input
-                type="password"
-                class="form-control"
-                id="password"
-                placeholder="Password"
-                />
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
-            <p class="text-center mt-3">
-                Don't have an account? <a href="/register">Register</a>
-            </p>
-            </form>
+        <div class="mb-3 mt-3">
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            autocomplete="off"
+          />
+          <p class="text-light mt-3 ms-2">Forgot password</p>
         </div>
+        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+        <p class="text-light ms-2 mt-2">
+          Create an account?
+          <span class="fw-bold"
+            ><NuxtLink class="text-light" to="/register"
+              >Sign Up</NuxtLink
+            ></span
+          >
+        </p>
+        <p class="text-center text-light mt-5 ">Or sign in with</p>
+        <div
+          class="d-flex justify-content-center gap-3 mt-3 align-items-center"
+        >
+          <img src="@/public/icons/facebook.png " alt="facebook" width="30px" />
+          <img src="@/public/icons/apple.png " alt="apple" width="35px" />
+          <img src="@/public/icons/google.png " alt="google" width="40px" />
         </div>
+      </form>
     </div>
+  </div>
 </template>
+
+<style lang="scss" scoped>
+@import "@/assets/scss/variables";
+
+.container-fluid {
+  background-color: $dark-color;
+}
+
+form {
+  background-color: $primary-color;
+  padding: 3rem;
+  border-radius: 30px !important;
+  input {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    &::placeholder {
+      color: #fff;
+      opacity: 0.5;
+    }
+
+    &:focus {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+  button {
+    background-color: $button-color;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    &:hover {
+      background-color: darken($button-color, 10%);
+      color: #000;
+    }
+  }
+  p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container-fluid {
+    background-color: $primary-color;
+  }
+  form {
+    padding: 0;
+    input {
+      width: 100%;
+    }
+  }
+}
+</style>

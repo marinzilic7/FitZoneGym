@@ -36,7 +36,7 @@
         </div>
         <button type="submit" class="btn btn-primary w-100">Sign Up</button>
         <p class="text-light mt-2">
-          Aleready have an account? <span class="fw-bold">Sign In</span>
+          Aleready have an account? <span class="fw-bold"><NuxtLink class="text-light" to="/login">Sign In</NuxtLink></span>
         </p>
         <p class="text-center text-light mt-5">Or sign in with</p>
         <div class="d-flex justify-content-center gap-3 mt-3 align-items-center">
