@@ -61,7 +61,7 @@
 @media screen and (max-width:878px){
   h5{
       font-size: 14px;
-      margin: 0 2rem;
+      
     }
   .contact-items{
    
@@ -77,7 +77,7 @@
 @media screen and (max-width:576px){
   h5{
       font-size: 14px;
-      margin: 0 2rem;
+      margin-top: 3px;
     }
   .contact-items{
    

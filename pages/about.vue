@@ -62,6 +62,7 @@
 
 @media screen and (max-width:576px){
     .main-text{
+      margin: 0;
         p{
             font-size: 12px;
             text-align: justify;
