@@ -7,14 +7,14 @@
       To contact with us you are invited to visit our cetnre and also can his us
       below way
     </h5>
-    <div class="contact-items d-flex justify-content-evenly ">
+    <div class="contact-items d-flex justify-content-evenly  flex-wrap ">
       <div class="d-flex flex-column gap-5">
         <h4 class="text-light">Our Address;</h4>
         <h4 class="text-light">24 street, House : 23,4th Floor</h4>
         <h4 class="text-light">California, United States</h4>
       </div>
       <div >
-        <div class="d-flex flex-column gap-5">
+        <div class="d-flex flex-column flex-wrap mt-5 mt-lg-0 mt-md-0 gap-5">
           <div class="d-flex gap-3">
             <img src="@/public/icons/gmail.png" alt="gmail" width="35px" />
             <h4 class="text-light">fit_zone@gmail.com</h4>
@@ -43,17 +43,51 @@
       </div>
     </div>
   </div>
+  <Footer />
 </template>
 
 <style scoped lang="scss">
 @import "@/assets/scss/variables";
 
 .contact-items{
-  margin-top: 7rem;
+  margin: 7rem 0;
 }
 
 h5 {
   color: $button-color;
   font-style: italic;
 }
+
+@media screen and (max-width:878px){
+  h5{
+      font-size: 14px;
+      margin: 0 2rem;
+    }
+  .contact-items{
+   
+    h4{
+      font-size: 14px;
+    }
+    img{
+      width: 25px;
+    }
+  }
+}
+
+@media screen and (max-width:576px){
+  h5{
+      font-size: 14px;
+      margin: 0 2rem;
+    }
+  .contact-items{
+   
+    h4{
+      font-size: 14px;
+    }
+    img{
+      width: 25px;
+    }
+  }
+}
+ 
 </style>
