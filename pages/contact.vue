@@ -2,7 +2,25 @@
   <nav>
     <Navbar />
   </nav>
-  <div class="vh-100 d-flex justify-content-center align-items-center">
-    <h3 class="text-center text-light">To be continued...</h3>
+  <div>
+    <h5>
+      To contact with us you are invited to visit our cetnre and also can his us
+      below way
+    </h5>
   </div>
 </template>
+
+<style scoped lang="scss">
+
+@import "@/assets/scss/variables";
+
+
+h5 {
+  color: $button-color;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+
+</style>

@@ -16,25 +16,15 @@ const toggleNavbar = () => {
   }, 500);
 };
 
-const isScrolled = ref(false);
 
-const handleScroll = () => {
-  isScrolled.value = window.scrollY > 50;
-};
 
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-});
 
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
 </script>
 
 <template>
   <header>
     <nav
-      :class="['navbar', 'navbar-expand-lg', 'py-3', { scrolled: isScrolled }]"
+      class="navbar navbar-expand-lg py-3"
     >
       <div class="container-fluid">
         <NuxtLink class="navbar-brand" to="/"
@@ -117,21 +107,9 @@ onUnmounted(() => {
 <style lang="scss">
 @import "@/assets/scss/variables";
 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1050;
-  transition: 0.3s ease-in-out;
-}
 
-.navbar.scrolled {
-  opacity: 0.8;
-}
 
-.navbar.expanded {
-  position: absolute !important;
-}
+
 .burger {
   cursor: pointer;
 }
