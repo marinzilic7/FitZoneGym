@@ -7,7 +7,7 @@
       To contact with us you are invited to visit our cetnre and also can his us
       below way
     </h5>
-    <div class="contact-items d-flex justify-content-evenly  flex-wrap ">
+    <div data-aos="fade-right" class="contact-items d-flex justify-content-evenly  flex-wrap ">
       <div class="d-flex flex-column gap-5">
         <h5 class="text-light">Our Address;</h5>
         <h5 class="text-light">24 street, House : 23,4th Floor</h5>
